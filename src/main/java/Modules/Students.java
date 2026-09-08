@@ -57,4 +57,8 @@ public class Students {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+    @Override
+    public String toString(){
+        return "Nombre =" + firstName+"/"+",Apellido:"+ lastName+"/"+"email:"+email+"/n";
+    }
 }

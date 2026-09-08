@@ -9,20 +9,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataStore {
-   private final List<Students> liststudents ;
+   private static final List<Students> liststudents= new ArrayList<>();
     private final List<Courses> listcourses ;
    private final List<EnroLlments> listenroLlments;
 
    public DataStore(){
-       liststudents = new ArrayList<>();
        listcourses= new ArrayList<>();
        listenroLlments= new ArrayList<>();
    }
-   public  List<Students> getStudents(){
+   public static  List<Students> getStudents(){
        return liststudents;
    }
-   public void addStudent(Students student){
-       liststudents.add(student);
+
+   public void addStudent(Students students){
+       liststudents.add(students);
    }
    public Students getStudent (Long id){
        for(Students students: liststudents){
