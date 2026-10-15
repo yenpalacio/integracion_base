@@ -1,11 +1,11 @@
-package service;
+package co.edu.cesde.martes2.service;
 
-import Modules.Students;
+import co.edu.cesde.martes2.modules.Students;
 
 import java.util.List;
 
 public interface StudentService {
-        void save (Students students);
+        Students save (Students students);
         Students findById(Long id);
         void deleteById(Long id);
         List<Students> findAll();

@@ -1,10 +1,13 @@
-package repositories.impl;
+package co.edu.cesde.martes2.repositories.impl;
 // implementar es como hacer las cosas
-import Modules.Students;
-import repositories.StudentRepository;
+import co.edu.cesde.martes2.modules.Students;
+import co.edu.cesde.martes2.repositories.StudentRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
+@Repository
 public class StudentRepositoryImpl implements StudentRepository {
 
     private final List<Students> liststudents ;
@@ -32,7 +35,7 @@ public class StudentRepositoryImpl implements StudentRepository {
     @Override
     public void deleteById(Long id) {
         Students student = findById(id);
-        if (student != null) {
+        if (student.getId().equals(id)) {
             liststudents.remove(student);
         }
     }

@@ -1,6 +1,6 @@
-package repositories;
+package co.edu.cesde.martes2.repositories;
 
-import Modules.Courses;
+import co.edu.cesde.martes2.modules.Courses;
 
 import java.util.List;
 

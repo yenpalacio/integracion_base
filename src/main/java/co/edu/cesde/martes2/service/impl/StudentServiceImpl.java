@@ -1,11 +1,13 @@
-package service.impl;
+package co.edu.cesde.martes2.service.impl;
 
-import Modules.Students;
-import repositories.StudentRepository;
-import service.StudentService;
+import co.edu.cesde.martes2.modules.Students;
+import co.edu.cesde.martes2.repositories.StudentRepository;
+import co.edu.cesde.martes2.service.StudentService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
@@ -15,8 +17,9 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void save(Students students) {
+    public Students save(Students students) {
          studentRepository.save(students);
+        return students;
     }
 
     @Override

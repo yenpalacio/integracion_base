@@ -1,11 +1,11 @@
-package repositories.impl;
+package co.edu.cesde.martes2.repositories.impl;
 
-import Modules.Courses;
-import Modules.Students;
-import repositories.CoursesRepository;
+import co.edu.cesde.martes2.modules.Courses;
+import co.edu.cesde.martes2.repositories.CoursesRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public class CoursesRepositoryImpl implements CoursesRepository {
     private final List<Courses> listcourses;
 

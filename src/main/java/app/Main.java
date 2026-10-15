@@ -1,16 +1,10 @@
 package app;
-import Data.DataStore;
-import Modules.Courses;
-import Modules.EnroLlments;
-import Modules.Students;
-import console.StudentConsole;
-import repositories.StudentRepository;
-import repositories.impl.StudentRepositoryImpl;
-import service.StudentService;
-import service.impl.StudentServiceImpl;
-
-import java.util.ArrayList;
-import java.util.List;
+import co.edu.cesde.martes2.data.DataStore;
+import co.edu.cesde.martes2.console.StudentConsole;
+import co.edu.cesde.martes2.repositories.StudentRepository;
+import co.edu.cesde.martes2.repositories.impl.StudentRepositoryImpl;
+import co.edu.cesde.martes2.service.StudentService;
+import co.edu.cesde.martes2.service.impl.StudentServiceImpl;
 
 public class Main {
     public static void main(String[] args) {

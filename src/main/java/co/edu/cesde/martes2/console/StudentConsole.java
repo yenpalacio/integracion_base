@@ -1,16 +1,17 @@
-package console;
+package co.edu.cesde.martes2.console;
 
-import Modules.Students;
-import service.StudentService;
+import co.edu.cesde.martes2.modules.Students;
+import co.edu.cesde.martes2.service.StudentService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Scanner;
-
+@Service
 public class StudentConsole {
     private final StudentService studentService;
     private final java.util.Scanner scanner;
 
-    public StudentConsole( StudentService studentService){
+    public StudentConsole(StudentService studentService){
         this.studentService = studentService;
         this.scanner = new Scanner(System.in);
     }

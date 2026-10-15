@@ -1,11 +1,21 @@
-package Modules;
+package co.edu.cesde.martes2.modules;
+
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-
+@Entity
+@Table(name = "Matriculas")
 public class EnroLlments {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY )
+    @Column(name = "id",nullable = false)
     private Long coursid;
-    private  Long studentid;
+    @ManyToOne
+    @JoinColumn(name = "Estudiante_id",nullable = false)
+    private  Students students;
+    @Column(name = "Estado",nullable = false)
     private String status;
+    @Column(name = "tiempo")
     private LocalDateTime createAt;
 
     public EnroLlments() {
@@ -13,7 +23,7 @@ public class EnroLlments {
 
     public EnroLlments(Long coursid, Long studentid, String status) {
         this.coursid = coursid;
-        this.studentid = studentid;
+        this.students = students;
         this.status = status;
         this.createAt= LocalDateTime.now();
     }
@@ -27,11 +37,11 @@ public class EnroLlments {
     }
 
     public Long getStudentid() {
-        return studentid;
+        return students.getId();
     }
 
     public void setStudentid(Long studentid) {
-        this.studentid = studentid;
+        this.students = students;
     }
 
     public String getStatus() {

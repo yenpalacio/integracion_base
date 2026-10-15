@@ -1,9 +1,8 @@
-package Data;
+package co.edu.cesde.martes2.data;
 
-import Modules.Courses;
-import Modules.EnroLlments;
-import Modules.Students;
-import jdk.jshell.Snippet;
+import co.edu.cesde.martes2.modules.Courses;
+import co.edu.cesde.martes2.modules.EnroLlments;
+import co.edu.cesde.martes2.modules.Students;
 
 import java.util.ArrayList;
 import java.util.List;

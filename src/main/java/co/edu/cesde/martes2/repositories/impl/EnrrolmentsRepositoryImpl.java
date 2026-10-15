@@ -1,10 +1,11 @@
-package repositories.impl;
+package co.edu.cesde.martes2.repositories.impl;
 
-import Modules.EnroLlments;
-import repositories.EnrrolmentsRepository;
+import co.edu.cesde.martes2.modules.EnroLlments;
+import co.edu.cesde.martes2.repositories.EnrrolmentsRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public class EnrrolmentsRepositoryImpl implements EnrrolmentsRepository {
 
     private final List<EnroLlments> listenroLlments ;

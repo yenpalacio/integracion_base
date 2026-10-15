@@ -1,14 +1,25 @@
-package Modules;
+package co.edu.cesde.martes2.modules;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Cursos")
 public class Courses {
 
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long id;
-        private String codigo;
-        private String descripcion;
-        private int duracion;
-        private int cupo;
 
-        public Courses (long id, String nombre, String descripcion, int duracion, int cupo) {
+@Column(name = "estudiante_id",nullable = false)
+        private tipoCodigo codigo;
+    @Column(name = "Descripcion")
+        private String descripcion;
+@Column(name = "duracion")
+        private Integer duracion;
+@Column(name="cupo",nullable = false)
+        private Integer cupo;
+
+        public Courses (long id, tipoCodigo nombre, String descripcion, int duracion, int cupo) {
             this.id = id;
             this.codigo = nombre;
             this.descripcion = descripcion;
@@ -28,11 +39,11 @@ public class Courses {
         this.id = id;
     }
 
-    public String getCodigo() {
+    public tipoCodigo getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String nombre) {
+    public void setCodigo(tipoCodigo nombre) {
         this.codigo = nombre;
     }
 

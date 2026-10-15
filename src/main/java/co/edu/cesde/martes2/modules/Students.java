@@ -1,10 +1,21 @@
-package Modules;
+package co.edu.cesde.martes2.modules;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Estudiante")
 public class Students {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY )
+    @Column(name = "id",nullable = false)
     private Long id;
+    @Column(name = "Nombre",nullable = false,length = 100)
     private String firstName;
+    @Column(name = "Apellido",nullable = false,length = 100)
     private  String lastName;
+    @Column(name = "email",nullable = false)
     private String email;
+    @Column(name = "Telefono",nullable = false)
     private String phone;
 
     public Students(){
